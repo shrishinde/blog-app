@@ -1,0 +1,23 @@
+<h1>Showing all categories</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @categories.each do |category| %>
+    <tr>
+      <th><%= category.name%></th>
+      <th><%= link_to 'Show', category_path(category) %></th>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to "New category", new_category_path %> |
+  <%= link_to "Home Page", root_path %>
+</p>

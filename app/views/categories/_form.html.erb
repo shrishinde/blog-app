@@ -1,0 +1,21 @@
+<% if @category.errors.any? %>
+  <h3>Error creating category</h3>
+  <ul>
+    <% @category.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <%end %>
+  </ul>
+<% end %>
+
+<%= form_for @category do |f| %>
+  <p>
+    <%= f.label :name%>
+    <%= f.text_field :name%><br/>
+  </p>
+
+  <p>
+    <%= f.submit %> |
+    <%= link_to "Cancel", categories_path %>
+  </p>
+
+<% end %>

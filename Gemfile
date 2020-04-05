@@ -11,6 +11,8 @@ gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
 
 # rails controller testing
 gem 'rails-controller-testing'
+# pagination
+gem "will_paginate", "~> 3.0.4"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.13'
 # Use Puma as the app server

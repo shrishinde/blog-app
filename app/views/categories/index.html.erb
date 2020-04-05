@@ -8,14 +8,18 @@
   </tr>
   </thead>
   <tbody>
-  <% @categories.each do |category| %>
-    <tr>
-      <th><%= category.name%></th>
-      <th><%= link_to 'Show', category_path(category) %></th>
-    </tr>
-  <% end %>
+    <% @categories.each do |category| %>
+      <tr>
+        <th><%= category.name%></th>
+        <th><%= link_to 'Show', category_path(category) %></th>
+      </tr>
+    <% end %>
   </tbody>
 </table>
+
+<p>
+  <%= will_paginate %>
+</p>
 
 <p>
   <%= link_to "New category", new_category_path %> |
